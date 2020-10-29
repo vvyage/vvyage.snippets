@@ -1,0 +1,207 @@
+/* 纯图片 */
+/*
+<div class="lists">
+  <a href="#" class="box">
+    <img src="avatar.jpg">
+  </a>
+  <a href="#" class="box">
+    <img src="avatar.jpg">
+  </a>
+<div>
+*/
+
+/* 缓动上移 */
+.list{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s;
+}
+.box~.box{
+  margin-left: 15px;
+}
+.box img{width: 100%; height: 100%;}
+.box:hover{
+  transform: translateY(-6px);
+}
+/* 放大效果 */
+.list{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  transition: all 0.3s;
+}
+.box~.box{
+  margin-left: 15px;
+}
+.box img{width: 100%; height: 100%;}
+.box:hover{
+  transform: scale(1.03); 
+}
+/* 框内放大效果 */
+.list{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.box~.box{
+  margin-left: 15px;
+}
+.box img{
+  width: 100%; 
+  height: 100%;
+  transition: all 0.5s;
+}
+.box:hover img{
+  transform: scale(1.1); 
+}
+/* 蒙层效果 */
+.list{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #4f4f4f;
+}
+.box~.box{
+  margin-left: 15px;
+}
+.box img{
+  width: 100%; 
+  height: 100%;
+  transition: all 0.5s;
+}
+.box:hover img{
+  opacity: 0.8; 
+}
+
+/* 上图下文DIV */
+/*
+<div class="lists">
+  <a href="#" class="item">
+    <div class="item_pic">
+      <img src="avatar.jpg">
+    </div>
+    <div class="item_content">
+      <div class="title">Title<div>
+      <div class="content">Content<div>
+    </div>
+  </a>
+</div>
+*/
+
+/* 框内放大图片 + 阴影 */
+.lists{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.item{
+  width: 200px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #eee;
+  transition: all 0.5s;
+}
+.item .item_pic{
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.item:hover .item_pic img{
+  transform: scale(1.1);
+}
+.item:hover{
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.item_content{
+  padding: 20px 10px;
+}
+
+/* 缓慢上滑 + 阴影 */
+.lists{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.item{
+  width: 200px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #eee;
+  transition: all 0.5s;
+  margin-right: 20px;
+}
+.item .item_pic{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.item:hover .item_pic img{
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.item:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.item_content{
+  padding: 20px 10px;
+}
+
+/* 蒙层效果 + 文字变色 + 边框 */
+.lists{
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+.item{
+  width: 200px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #eee;
+  transition: all 0.5s;
+  margin-right: 20px;
+}
+.item .item_pic{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #4f4f4f;
+}
+.item:hover .item_pic img{
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.item:hover{
+  border: 1px solid green;
+}
+.item:hover .item_pic img{
+  opacity: 0.8;
+}
+.item:hover .item_content{
+  color: green;
+}
+.item_content{
+  padding: 20px 10px;
+  transition: all 0.5s;
+}
