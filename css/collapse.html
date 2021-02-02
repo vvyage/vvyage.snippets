@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<script>
+  function openCollapse(action) {
+    document.getElementById('isCollapse').checked = action;
+  }
+</script>
+
+<style>
+  body {
+    text-align: center;
+    background: #f9fafa;
+  }
+  #isCollapse {
+    display: none;
+  }
+  .content {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  label {
+    position: relative;
+    padding-bottom: 10px;
+  }
+  .collapse-open {
+    display: inline-block;
+    top: -32px;
+  }
+  .collapse-close {
+    display: none;
+    width: 340px;
+    padding-top: 30px;
+    background: linear-gradient(to top, #ffffffff, #ffffff66);
+    top: -62px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #isCollapse:checked ~ .collapse-open {
+    display: none;
+  }
+  #isCollapse:checked ~ .collapse-close {
+    display: inline-block;
+  }
+  #isCollapse:checked ~ .content {
+    max-height: 150px;
+    overflow: hidden;
+  }
+</style>
+
+<body>
+  <h1>利用checkbox/label实现展开/收起效果</h1>
+  <input type="checkbox" id="isCollapse" checked="checked">
+  <div class="content">
+    <h2>Content</h2>
+    <p>Test content</p>
+    <p>Test content</p>
+    <p>Test content</p>
+    <p>Test content</p>
+    <p>Test content</p>
+  </div>
+  <label for="isCollapse" class="collapse-open" onclick="openCollapse(false)">收起</label>
+  <label for="isCollapse" class="collapse-close" onclick="openCollapse(true)">展开</label>  
+</body>
+</html>
